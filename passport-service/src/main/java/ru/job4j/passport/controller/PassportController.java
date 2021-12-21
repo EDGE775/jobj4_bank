@@ -54,6 +54,6 @@ public class PassportController {
 
     @GetMapping("/unavailable")
     public ResponseEntity<List<Passport>> getUnavailablePassports() {
-        return new ResponseEntity<>(passportService.findByActiveIsFalse(), HttpStatus.OK);
+        return new ResponseEntity<>(passportService.findByIsActiveIsFalse(), HttpStatus.OK);
     }
 }

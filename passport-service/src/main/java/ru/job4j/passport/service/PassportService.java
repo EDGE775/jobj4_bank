@@ -40,7 +40,7 @@ public class PassportService {
         return repository.findBySeria(seria);
     }
 
-    public  List<Passport> findByActiveIsFalse() {
+    public  List<Passport> findByIsActiveIsFalse() {
         return repository.findByIsActive(false);
     }
 }

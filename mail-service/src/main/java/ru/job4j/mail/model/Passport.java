@@ -1,18 +1,14 @@
-package ru.job4j.passport.model;
+package ru.job4j.mail.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
 
-@Entity
 public class Passport {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int id;
 
-    @Temporal(TemporalType.TIMESTAMP)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date created = new Date(System.currentTimeMillis());
 
